@@ -1,0 +1,32 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+    <h4 class="page-header">User Managment</h4>
+       	<div class="">
+       		<button type="new" class="btn btn-primary primary_btn" ui-sref="adduser">+New User</button>
+            <table class="table table-striped">
+              <thead>
+		        <tr>
+		            <th><strong> User ID</strong></th>
+		            <th><strong> User Name</strong></th>
+		            <th><strong> Mobile Number</strong></th>
+		            <th><strong>Email Address</strong></th>
+		            <th><strong>Role</strong></th>
+		            <th><strong>Action</strong></th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr ng-repeat="single in user_list">
+			        <td>{{single.user_id}}</td>
+			        <td> {{single.user_name}}</td>
+			        <td> {{single.user_mobile}}</td>
+			        <td> {{single.email_id}}</td>
+			        <td> {{single.role}}</td>
+			        <td>
+			        <h6 class="col-sm-2"> <a  ui-sref="edituser({user_id:single.user_id})">Edit</a></h6>
+			        <h6> <a class="col-sm-2" ng-click="delete(single)">Delete</a></h6>
+			        </td>
+			        <h4 style="color:green;">{{message}}</h4>
+			    </tr>      
+			  </tbody>
+		</table>
+  	</div>
+</div>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Welcome To Shop Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css" />
+    
+   <link href="./css/style.css" rel="stylesheet">
+
+    <script src="js/libs/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
+    <script src="js/libs/angular-ui-router.min.js"></script>
+    <script src="js/libs/ui-bootstrap.min.js"></script>
+    <script src="js/libs/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/libs/angular-messages.min.js"></script>
+    <script src="js/libs/angular-datepicker.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/libs/dirPagination.js">&lt</script>
+   <!--  <script src="js/libs/ui-grid.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    
+    <nav class="navbar navbar-fixed-top bg-nav" ng-hide="hideit" ng-controller="navCtrl">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Shop Admin</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span>Johm rohr</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a ng-click="logout()">Logout</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-power-off"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid sidebarMenu" ng-hide="hideit">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <img src="img/adam.jpg" alt="Image" class="img-circle" width="95" height="100" style="margin-bottom:10px;"> 
+          <span>Johm rohr</span><hr>
+            <ul class="nav nav-sidebar">
+              <li><a ui-sref="shop"><i class="fa fa-shopping-cart"></i> Shop Managment</a></li>
+              <li><a ui-sref="user"><i class="fa fa-user"></i> User Managment</a></li>
+              <li><a ui-sref="vendor"><i class="fa fa-user"></i> Vendor</a></li>
+
+            </ul>
+        </div>
+      </div>
+    </div>  
+<div ui-view ></div>
+  <footer class="footer" ng-hide="hideit">
+      <div class="container-fluid">
+        <p class="text-muted text-right"><a href="http://www.inevitablesol.com/"> Power by Inevitable solutions</a></p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

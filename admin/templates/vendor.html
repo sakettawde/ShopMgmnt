@@ -1,0 +1,32 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+    <h4 class="page-header">Vendor</h4>
+       	<div class="">
+       		<button type="new" class="btn btn-primary primary_btn" ui-sref="addvendor">+New vendor</button>
+            <table class="table table-striped">
+              <thead>
+		        <tr>
+		            <th><strong> Vendor ID</strong></th>
+		            <th><strong> vendor Name</strong></th>
+		            <th><strong>Address</strong></th>
+		            <th><strong> Mobile Number</strong></th>
+		            <th><strong>Email id</strong></th>
+		            <th><strong>Action</strong></th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr ng-repeat="single in list">
+			        <td>{{single.v_id}}</td>
+			        <td> {{single.v_name}}</td>
+			        <td> {{single.address}}</td>
+			        <td> {{single.mobile_no}}</td>
+			        <td> {{single.email_id}}</td>
+			        <td>
+			        <h6 class="col-sm-2"> <a  ui-sref="editvendor({v_id:single.v_id})">Edit</a></h6>
+			        <h6> <a class="col-sm-2" ng-click="delete(single)">Delete</a></h6>
+			        <h4 style="color:green;">{{message}}</h4>
+			        </td>
+			    </tr>      
+			  </tbody>
+		</table>
+  	</div>
+</div>

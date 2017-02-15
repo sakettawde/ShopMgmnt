@@ -1,0 +1,34 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+    <h4 class="page-header">Shop Managment</h4>
+       	<div class="">
+       		<button type="new" class="btn btn-primary primary_btn" ui-sref="addshop">+New Shop</button>
+            <table class="table table-striped">
+              <thead>
+		        <tr>
+		            <th><strong> Shop ID</strong></th>
+		            <th><strong> Shop Name</strong></th>
+		            <th><strong>Owner Name</strong></th>
+		            <th><strong> Mobile Number</strong></th>
+		            <th><strong>Address</strong></th>
+		            <th><strong>Created By</strong></th>
+		            <th><strong>Action</strong></th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr ng-repeat="single in list">
+			        <td>{{single.shop_id}}</td>
+			        <td> {{single.shop_name}}</td>
+			        <td> {{single.shop_owner}}</td>
+			        <td> {{single.shop_number}}</td>
+			        <td> {{single.shop_add}}</td>
+			        <td> {{single.created_by | date:"dd-MM-yyyy"}}</td>
+			        <td>
+			        <h6 class="col-sm-2"> <a  ui-sref="editshop({shop_id:single.shop_id})">Edit</a></h6>
+			        <h6> <a class="col-sm-2" ng-click="delete(single)">Delete</a></h6>
+			        <h4 style="color:green;">{{message}}</h4>
+			        </td>
+			    </tr>      
+			  </tbody>
+		</table>
+  	</div>
+</div>
